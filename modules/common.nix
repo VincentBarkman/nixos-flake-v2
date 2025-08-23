@@ -35,6 +35,15 @@
     shell = pkgs.bash;
   };
 
+  users.users.guest = {
+    isNormalUser = true;
+    description = "Guest account";
+    createHome = true;
+    shell = pkgs.bash;
+    extraGroups = [ "networkmanager" ];
+    initialPassword = "guest";
+  };
+
   services.xserver = {
     enable = true;
     xkb.layout = "se";
