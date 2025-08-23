@@ -1,0 +1,5 @@
+Desktop
+`sudo nixos-rebuild switch --flake .#atlas --impure`
+
+Laptop:
+`sudo nixos-rebuild switch --flake .#polaris --impure`
