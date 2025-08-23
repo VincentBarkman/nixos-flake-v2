@@ -25,8 +25,8 @@
   networking.networkmanager.enable = true;
 
   fonts.fontconfig.enable = true;
-  fonts.packages = with pkgs; [ 
-    nerd-fonts.bigblue-terminal 
+  fonts.packages = with pkgs; [
+    nerd-fonts.bigblue-terminal
   ];
 
   users.users.vincent = {
@@ -40,17 +40,21 @@
     xkb.layout = "se";
     libinput.enable = true;
 
-    windowManager.i3 = {
-      enable = true;
-      
-      extraPackages = with pkgs; [
-        i3status
-        i3lock
-        dmenu
-        picom
-        feh
-      ];
-    };
+    desktopManager.lxqt.enable = true;
+  };
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+  security.polkit.enable = true;
+
+  services.xserver.windowManager.i3 = {
+    enable = true;
+    extraPackages = with pkgs; [
+      i3status
+      i3lock
+      dmenu
+      picom
+      feh
+    ];
   };
 
   services.displayManager.ly.enable = true;
@@ -66,5 +70,5 @@
   home-manager.backupFileExtension = "hm-bak";
 
   system.stateVersion = "25.05";
-
 }
+
