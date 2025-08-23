@@ -1,4 +1,3 @@
-# home/vincent.nix
 { config, pkgs, lib, osConfig, ... }:
 
 let
@@ -7,7 +6,6 @@ let
 
   host = osConfig.networking.hostName or "unknown";
   isLaptop = builtins.elem host laptopHosts;
-  # ------------------------------------------------------------
 
   dotDesktop = ../dotfiles/desktop;
   dotLaptop  = ../dotfiles/laptop;
@@ -37,43 +35,45 @@ in
     };
   };
 
-  home.packages = with pkgs; [
-    # Development tools
-    neovim
-    git
-    gnumake
-    docker
-    gdb
-    valgrind
-    jq
-    sqlite
-    tmux
+  home.packages =
+    (with pkgs; [
+      # Development tools
+      neovim
+      git
+      gnumake
+      docker
+      gdb
+      valgrind
+      jq
+      sqlite
+      tmux
 
-    # Languages
-    go
-    python314
-    clang
-    nodejs_24
-    rustup
+      # Languages
+      go
+      python314
+      clang
+      nodejs_24
+      rustup
 
-    # General
-    neofetch
-    fzf
-    openssl
+      # General
+      neofetch
+      fzf
+      openssl
 
-    # Web
-    firefox
-    curl 
-    wget 
-    nmap
+      # Web
+      firefox
+      curl
+      wget
+      nmap
 
-    # helpers
-    maim 
-    xclip
+      # helpers
+      maim
+      xclip
 
-    # text
-    plantuml
-  ];
+      # text
+      plantuml
+    ])
+    ++ lib.optionals (!isLaptop) [ pkgs.goxlr-utility ];
 
   xdg.configFile = {
     "alacritty".source = dot + /alacritty;
