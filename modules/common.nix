@@ -22,6 +22,8 @@
 
   console.keyMap = "sv-latin1";
 
+  nixpkgs.config.allowUnfree = true;
+
   networking.networkmanager.enable = true;
 
   fonts.fontconfig.enable = true;

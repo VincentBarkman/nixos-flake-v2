@@ -47,6 +47,7 @@ in
       jq
       sqlite
       tmux
+      jetbrains.goland
 
       # Languages
       go
@@ -59,6 +60,7 @@ in
       neofetch
       fzf
       openssl
+      keymapp
 
       # Web
       firefox
