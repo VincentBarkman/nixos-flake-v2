@@ -68,6 +68,7 @@
     ];
   };
 
+
   services.displayManager.ly.enable = true;
   services.displayManager.defaultSession = "none+i3";
 

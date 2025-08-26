@@ -35,7 +35,8 @@ in
     };
   };
 
-  home.packages =
+ 
+  home.packages = (
     (with pkgs; [
       # Development tools
       neovim
@@ -62,6 +63,9 @@ in
       openssl
       keymapp
 
+      # network 
+      networkmanagerapplet
+
       # Web
       firefox
       curl
@@ -75,7 +79,9 @@ in
       # text
       plantuml
     ])
-    ++ lib.optionals (!isLaptop) [ pkgs.goxlr-utility ];
+    ++ lib.optionals (!isLaptop) [ pkgs.goxlr-utility ]
+    ++ lib.optionals isLaptop [ pkgs.brightnessctl pkgs.tlp ]
+  );
 
   xdg.configFile = {
     "alacritty".source = dot + /alacritty;
