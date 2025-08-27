@@ -46,10 +46,11 @@
     initialPassword = "guest";
   };
 
+  services.libinput.enable = true;
+
   services.xserver = {
     enable = true;
     xkb.layout = "se";
-    libinput.enable = true;
 
     desktopManager.lxqt.enable = true;
   };
