@@ -49,6 +49,7 @@ in
       sqlite
       tmux
       jetbrains.goland
+      openshift
 
       # Languages
       go
