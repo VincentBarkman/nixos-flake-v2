@@ -49,7 +49,6 @@ in
       sqlite
       tmux
       jetbrains.goland
-      openshift
 
       # Languages
       go
@@ -63,7 +62,6 @@ in
       fzf
       openssl
       keymapp
-      aewan
 
       # network 
       networkmanagerapplet
