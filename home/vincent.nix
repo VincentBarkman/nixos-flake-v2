@@ -63,7 +63,6 @@ in
       fzf
       openssl
       keymapp
-      aewan
 
       # network 
       networkmanagerapplet
