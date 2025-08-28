@@ -63,6 +63,7 @@ in
       fzf
       openssl
       keymapp
+      cheese
 
       # network 
       networkmanagerapplet
