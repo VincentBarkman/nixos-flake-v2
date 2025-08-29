@@ -19,6 +19,8 @@ in
   programs.home-manager.enable = true;
 
   xsession.enable = true;
+  home.sessionVariables.PKG_CONFIG_PATH = "${pkgs.sdl3.dev}/lib/pkgconfig";
+
 
   xsession.windowManager.i3 = {
     enable = false;
@@ -50,6 +52,8 @@ in
       tmux
       jetbrains.goland
       openshift
+      cmake
+      pkg-config
 
       # Languages
       go
@@ -58,12 +62,16 @@ in
       nodejs_24
       rustup
 
+      # packages
+      sdl3
+
       # General
       neofetch
       fzf
       openssl
       keymapp
       cheese
+      calc
 
       # network 
       networkmanagerapplet
