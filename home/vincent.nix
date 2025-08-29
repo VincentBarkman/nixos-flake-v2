@@ -85,6 +85,8 @@ in
       # helpers
       maim
       xclip
+      zip
+      unzip
 
       # text
       plantuml
