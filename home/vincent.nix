@@ -51,9 +51,11 @@ in
       sqlite
       tmux
       jetbrains.goland
+      jetbrains.clion
       openshift
       cmake
       pkg-config
+      clang-tools
 
       # Languages
       go
