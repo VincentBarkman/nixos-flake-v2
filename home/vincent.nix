@@ -51,7 +51,7 @@ in
       sqlite
       tmux
       jetbrains.goland
-      jetbrains.clion
+      jetbrains.webstorm
       openshift
       cmake
       pkg-config
