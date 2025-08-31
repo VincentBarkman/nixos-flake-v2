@@ -74,6 +74,7 @@ in
       keymapp
       cheese
       calc
+      chromium
 
       # network 
       networkmanagerapplet
