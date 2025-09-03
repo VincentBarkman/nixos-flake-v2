@@ -5,6 +5,17 @@
     package = pkgs.goxlr-utility;
   };
 
+    services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.graphics.enable = true;
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    nvidiaSettings = true;
+    open = false;
+    powerManagement.enable = false;
+  };
+
   environment.etc."xdg/autostart/99-lxqt-monitor-layout.desktop".text = ''
     [Desktop Entry]
     Type=Application

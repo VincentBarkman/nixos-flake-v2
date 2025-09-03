@@ -24,7 +24,9 @@ font pango:BigBlueTerm437 Nerd Font Mono 9
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1
 exec_always --no-startup-id sh -c 'sleep 1 && feh --bg-scale ./black.png'
-exec_always --no-startup-id xrandr   --output DP-2  --auto --primary   --output DP-3  --auto --left-of  DP-2 --output HDMI-1 --auto --right-of DP-2
+exec_always --no-startup-id xrandr --output DP-4  --auto --output DP-2  --auto --primary --right-of DP-4 --output HDMI-0 --auto --right-of DP-2
+
+
 
 exec --no-startup-id hsetroot -solid "#000000"
 
