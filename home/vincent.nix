@@ -74,7 +74,7 @@ in
       keymapp
       cheese
       calc
-      chromium
+      flatpak
 
       # network 
       networkmanagerapplet
@@ -84,12 +84,15 @@ in
       curl
       wget
       nmap
+      tor-browser
+      chromium
 
       # helpers
       maim
       xclip
       zip
       unzip
+      tree
 
       # text
       plantuml
