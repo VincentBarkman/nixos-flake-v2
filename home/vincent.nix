@@ -52,10 +52,12 @@ in
       tmux
       jetbrains.goland
       jetbrains.webstorm
+      jetbrains.clion
       openshift
       cmake
       pkg-config
       clang-tools
+      arduino-ide
 
       # Languages
       go
